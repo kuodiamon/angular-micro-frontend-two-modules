@@ -9,6 +9,26 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
+    "paths": {
+      "auth": [
+        "dist/auth"
+      ],
+      "lib-service": [
+        "dist/lib-service"
+      ],
+      "models": [
+        "dist/models"
+      ],
+      "login": [
+        "dist/login-lib"
+      ],
+      "user-list": [
+        "dist/user/user-list-lib"
+      ],
+      "add-user": [
+        "dist/user/add-user-lib"
+      ]
+    },
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,

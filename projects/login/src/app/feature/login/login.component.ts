@@ -1,19 +1,18 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from 'models';
 import { AuthService } from 'auth';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss'],
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'],
 })
-export class DashboardComponent {
-  public isSidenavOpen = false;
-
+export class LoginComponent {
   constructor(private readonly authService: AuthService, private readonly router: Router) {}
 
-  logout() {
-    this.authService.logout();
+  login(user: User) {
+    this.authService.login(user);
     this.router.navigateByUrl('/', {
       onSameUrlNavigation: 'reload',
       skipLocationChange: true,
